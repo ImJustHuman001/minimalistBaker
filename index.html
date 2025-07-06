@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Baker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Grand+Hotel&family=Lobster&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <style>
+        /* body{
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            border:  solid blue;
+            box-sizing: border-box;
+        } */
+        .topnav{
+            width: 100%;
+            height: 10%;
+            background-color: bisque;
+        }
+        .topnav ul{
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+        }
+        .topnav ul li{
+            display: inline-block;
+            padding: 2.5px 5px;
+        }
+        .topnav>ul>li>a, .lowernav>ul>li>a, .title>li>a{
+            text-decoration: none;
+            color: black;
+        }
+        .lowernav{
+            width: 100%;
+            height: 30%;
+            border-bottom: 6px solid black;
+        }
+        .lowernav ul{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 0px;
+        }
+        .lowernav ul li{
+            list-style: none;
+            padding: 50px;
+            padding-left: 0px;
+            padding-right: 0px;
+            font-size: 50px;
+        }
+        #minimalist{
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding: 25px;
+            transform: rotate(-15deg);
+            text-align: center;
+        }
+        .title{
+            display: flex;
+            list-style: none;
+            padding: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
+            align-items: center;
+            gap: 30px;
+        }
+        #logo{
+            border-radius: 31px;
+        }
+        h1, .title>ul>li>a{
+            padding-left: 270px;
+            padding-right: 310px;
+        }
+        .pictures{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .picture1{
+            /* border: 2px solid; */
+            width: 300px;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: transform 0.7s ease-in-out;
+        }
+        .picture1:hover{
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .picture2{
+            /* border: 2px solid; */
+            width: 340px;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+        }
+        .picture2:hover{
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .picture3 {
+            width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out;
+        }
+        .picture3:hover {
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .right{
+            color: brown;
+            position: fixed;
+            top: 70%;
+            left: 10%;
+            margin-left: 85%;
+            list-style: none;
+        }
+        .right>li>a{
+            text-decoration: none;
+        }
+        .right #like a{
+            color: brown;
+        }
+        .right #search a{
+            color: white;
+        }
+        .right #like{
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: 8px;
+            background-color: white;
+            transition: transform 0.7s ease-in-out;
+        }
+        .right #search{
+            border-radius: 30px;
+            padding: 8px;
+            background-color: rgb(187, 107, 2);
+            transition: transform 0.7s ease-in-out;
+        }
+        .right #like:hover{
+            transform: scale(1.2);
+        }
+        .right #search:hover{
+            transform: scale(1.2);
+        }
+        ---------------------------------
+        @media all and (max-width: 575px) {
+            body{
+                grid-template-areas:
+                "nav";
+                grid-template-rows: 60px 1fr 70px 1fr 70px;
+                grid-template-columns: 1fr;
+            }
+        }
+        .lowernav, .topnav{
+            grid-area: nav;
+        }
+    </style>
+</head>
+<body>
+    <nav class="topnav">
+        <ul>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="37.5" viewBox="0 0 24 24"><path fill="currentColor" d="M13.387 7.32c0-.788.174-1.187 1.398-1.187h1.535V3.2h-2.347c-2.933 0-4.106 1.957-4.106 4.107v1.76H7.52V12h2.347v8.8h3.52V12h2.585l.348-2.933h-2.933z"/></svg></li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="37.5" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg></a></a></li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="37.5" viewBox="0 0 16 16"><path fill="currentColor" d="M8.34 1C5.46 1 2.62 2.92 2.62 6.02c0 1.97 1.11 3.1 1.78 3.1c.28 0 .44-.77.44-.99c0-.26-.66-.82-.66-1.9c0-2.26 1.72-3.85 3.94-3.85c1.91 0 3.32 1.09 3.32 3.08c0 1.49-.6 4.28-2.53 4.28c-.7 0-1.3-.5-1.3-1.23c0-1.06.74-2.09.74-3.18c0-1.86-2.63-1.52-2.63.72c0 .47.06.99.27 1.42c-.39 1.67-1.18 4.15-1.18 5.87c0 .53.08 1.05.13 1.58c.1.11.05.1.19.04c1.41-1.94 1.36-2.31 2-4.85c.35.66 1.24 1.01 1.94 1.01c2.98 0 4.32-2.9 4.32-5.52c0-2.79-2.41-4.6-5.05-4.6"/></svg></a></li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="37.5" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"/></svg></a></li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="37.5" viewBox="0 0 24 24"><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg></a></li>
+        </ul>
+    </nav>
+    <nav class="lowernav">
+        <ul>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="37.5" height="37.5" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M15 2H0V1h15zm0 4H0V5h15zm0 4H0V9h15zm0 4H0v-1h15z" clip-rule="evenodd"/></svg></a></li>
+            <li id="minimalist"><a href=""></a>Minimalist <br> Baker</li>
+            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="37.5" height="37.5" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="40" stroke-dashoffset="40" d="M10.76 13.24c-2.34 -2.34 -2.34 -6.14 0 -8.49c2.34 -2.34 6.14 -2.34 8.49 0c2.34 2.34 2.34 6.14 0 8.49c-2.34 2.34 -6.14 2.34 -8.49 0Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="40;0"/></path><path stroke-dasharray="12" stroke-dashoffset="12" d="M10.5 13.5l-7.5 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="12;0"/></path></g></svg></a></li>
+        </ul>
+    </nav>
+    <div class="title">
+            <img id="logo" src="./image/mb_logo.jpg" alt=""><h3>Simple Food That <br> Makes You Feel Good</h3>
+            <h1>NEW RECIPES</h1>
+            <li><a href="">SHOW ME EVERYTHING <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="17.5" viewBox="0 0 50 50"><path fill="currentColor" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15"/><path fill="currentColor" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z"/><path fill="currentColor" d="M16 24h17v2H16z"/></svg></a></li>
+    </div>
+    <div class="pictures">
+            <li class="picture1"><img src="./image/chocolate cake.jpg" alt=""></li>
+            <li class="picture2"><img src="./image/strawberryCones.jpg" alt=""></li>
+            <li class="picture3"><img src="./image/meatpieBurger.jpg" alt=""></li>
+    </div>
+    <div class="right">
+        11.3k
+        <li id="like"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"/></svg></a></li>
+        <br>
+        <li id="search"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.385 15.446a6.75 6.75 0 1 1 1.06-1.06l5.156 5.155a.75.75 0 1 1-1.06 1.06zm-7.926-1.562a5.25 5.25 0 1 1 7.43-.005l-.005.005l-.005.004a5.25 5.25 0 0 1-7.42-.004" clip-rule="evenodd"/></svg></a></li>
+    </div>
+</body>
+</html>
