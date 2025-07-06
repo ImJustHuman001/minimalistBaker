@@ -124,28 +124,77 @@
         .right #search:hover{
             transform: scale(1.2);
         }
-        @media (max-width: 768px) {
-        .lowernav ul li {
-            padding: 20px;
-        }
-        .pictures {
+        @media only screen and (max-width: 400px) {
+        .topnav ul {
             flex-direction: column;
             align-items: center;
         }
-        .picture1, .picture2, .picture3 {
-            width: 300px;
-            margin-bottom: 20px;
+
+        .lowernav ul {
+            flex-direction: column;
+            align-items: center;
         }
+
+        .lowernav ul li {
+            font-size: 28px;
+            padding: 20px 0;
+        }
+
+        #minimalist {
+            font-size: 32px;
+            padding: 10px;
+            transform: none;
+        }
+
+        .title {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+        }
+
+        .title img {
+            width: 100px;
+        }
+
         .title h1 {
+            padding: 0;
+            font-size: 22px;
+        }
+
+        .pictures {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .picture1,
+        .picture2,
+        .picture3 {
+            width: 90%;
+            max-width: 320px;
+        }
+
+        .right {
+            top: unset;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .right li {
+            padding: 5px 10px;
+        }
+
+        h1, .title > ul > li > a {
             padding-left: 0;
             padding-right: 0;
-            text-align: center;
         }
-        .right{
-            margin-left: 80%;
-        }
-}
-
+    }
     </style>
 </head>
 <body>
