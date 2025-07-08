@@ -124,10 +124,9 @@
         .right #search:hover{
             transform: scale(1.2);
         }
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 600px) {
             .lowernav ul li {
                 font-size: 28px;
-                padding: 20px;
             }
             .pictures {
                 flex-direction: column;
@@ -141,6 +140,28 @@
                 padding-left: 0;
                 padding-right: 0;
                 text-align: center;
+            }
+            #minimalist{
+                font-size: 52px;
+            }
+            .right{
+                margin-left: 80%;
+            }
+            .picture2{
+                width: 340px;
+                overflow: hidden;
+                border-radius: 20px;
+                transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+            }
+            .picture1, .picture3 {
+                width: 300px;
+                border-radius: 20px;
+                overflow: hidden;
+                transition: transform 0.7s ease-in-out;
+            }
+            .picture1:hover, .picture2:hover, .picture3:hover {
+                transform: scale(1.2);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             }
         }
     </style>
