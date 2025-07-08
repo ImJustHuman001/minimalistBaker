@@ -124,48 +124,25 @@
         .right #search:hover{
             transform: scale(1.2);
         }
-        @media screen and (max-width: 700px) {
-        .topnav ul {
-            flex-direction: row;
-            align-items: center;
+        @media (max-width: 768px) {
+            .lowernav ul li {
+                font-size: 28px;
+                padding: 20px;
+            }
+            .pictures {
+                flex-direction: column;
+                align-items: center;
+            }
+            .picture1, .picture2, .picture3 {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .title h1 {
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
         }
-        .lowernav ul {
-            flex-direction: row;
-            align-items: center;
-        }
-        .title {
-            flex-direction: row;
-            align-items: center;
-            text-align: center;
-            padding: 0;
-        }
-        .title h1 {
-            padding-left: 0;
-            padding-right: 0;
-            text-align: center;
-        }
-        .pictures {
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-            padding: 20px 0;
-        }
-        .picture1, .picture2, .picture3 {
-            width: 300px;
-            margin-bottom: 20px;
-        }
-        .right {
-            margin-left: 80%;
-        }
-        .right li {
-            padding: 5px 10px;
-        }
-
-        h1, .title > ul > li > a {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
     </style>
 </head>
 <body>
